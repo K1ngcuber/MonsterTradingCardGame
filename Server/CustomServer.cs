@@ -49,7 +49,7 @@ public static class CustomServer
                 var context = await Listener.GetContextAsync();
                 lock (Listener)
                 {
-                    if (_isRunning) ProcessRequest(context);
+                    if (_isRunning) ProcessRequest(context).Wait();
                 }
             }
             catch (Exception e)
@@ -59,7 +59,7 @@ public static class CustomServer
         }
     }
 
-    private static void ProcessRequest(HttpListenerContext context)
+    private static async Task ProcessRequest(HttpListenerContext context)
     {
         try
         {
@@ -67,11 +67,15 @@ public static class CustomServer
             var method = context.Request.HttpMethod;
 
             using var response = context.Response;
-            using var body = context.Request.InputStream;
+            await using var body = context.Request.InputStream;
             using var reader = new StreamReader(body, context.Request.ContentEncoding);
+
+            var json = await reader.ReadToEndAsync();
             
-            var json = reader.ReadToEnd();
-            HandleRequest(route[1..], method, json, context.Response);
+            //log request
+            Console.WriteLine($"Request: {method} {route} body: {json}");
+
+            await HandleRequest(route[1..], method, json, context.Response);
         }
         catch (Exception e)
         {
@@ -79,7 +83,7 @@ public static class CustomServer
         }
     }
 
-    private static void HandleRequest(string route, string httpMethod, string body, HttpListenerResponse response)
+    private static async Task HandleRequest(string route, string httpMethod, string body, HttpListenerResponse response)
     {
         //find all controllers
         var controllers = Assembly.GetExecutingAssembly().GetTypes()
@@ -111,16 +115,29 @@ public static class CustomServer
         }
 
         //todo body and parameters from route
-        var args = Array.Empty<object?>();
+        var args = new object?[]
+        {
+            body
+        };
         try
         {
-            var result = method.Invoke(controllerObj, args);
-            HandleResponse(200,result?.ToString() ?? "",response);
+            object? result;
+            var isAwaitable = method.ReturnType.GetMethod(nameof(Task.GetAwaiter)) != null;
+            if (isAwaitable)
+            {
+                //!!!!!!!!!!! possible source for error xD
+                result = (object)await (dynamic)method.Invoke(controllerObj, args)!;
+            }
+            else
+            {
+                result = method.Invoke(controllerObj, args);
+            }
+            HandleResponse(200, result?.ToString() ?? "", response);
         }
         //Todo HttpException
         catch
         {
-            HandleResponse(500,"Internal Server Error", response);
+            HandleResponse(500, "Internal Server Error", response);
         }
     }
 
