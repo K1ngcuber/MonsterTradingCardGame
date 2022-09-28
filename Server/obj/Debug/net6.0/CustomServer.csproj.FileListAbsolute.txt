@@ -1,0 +1,12 @@
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CustomServer/bin/Debug/net6.0/CustomServer.deps.json
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CustomServer/bin/Debug/net6.0/CustomServer.dll
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CustomServer/bin/Debug/net6.0/CustomServer.pdb
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CustomServer/obj/Debug/net6.0/CustomServer.csproj.AssemblyReference.cache
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CustomServer/obj/Debug/net6.0/CustomServer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CustomServer/obj/Debug/net6.0/CustomServer.AssemblyInfoInputs.cache
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CustomServer/obj/Debug/net6.0/CustomServer.AssemblyInfo.cs
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CustomServer/obj/Debug/net6.0/CustomServer.csproj.CoreCompileInputs.cache
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CustomServer/obj/Debug/net6.0/CustomServer.dll
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CustomServer/obj/Debug/net6.0/refint/CustomServer.dll
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CustomServer/obj/Debug/net6.0/CustomServer.pdb
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CustomServer/obj/Debug/net6.0/ref/CustomServer.dll

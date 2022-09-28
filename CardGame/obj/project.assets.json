@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Server/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Server.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Server.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Server/1.0.0": {
+      "type": "project",
+      "path": "../Server/Server.csproj",
+      "msbuildProject": "../Server/Server.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Server >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/maximiliankriegl/.nuget/packages/": {},
@@ -14,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGame/CardGame.csproj",
+      "projectUniqueName": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/CardGame.csproj",
       "projectName": "CardGame",
-      "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGame/CardGame.csproj",
+      "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/CardGame.csproj",
       "packagesPath": "/Users/maximiliankriegl/.nuget/packages/",
-      "outputPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGame/obj/",
+      "outputPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -35,7 +54,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/Server/Server.csproj": {
+              "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/Server/Server.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

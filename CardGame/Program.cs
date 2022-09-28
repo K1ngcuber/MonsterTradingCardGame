@@ -1,39 +1,19 @@
-﻿using System.Net;
-using System.Net.Sockets;
-using System.Text;
-
-namespace CardGame;
+﻿namespace CardGame;
 
 internal static class Program
 {
-    public static async Task Main(string[] args)
+    public static void Main()
     {
-        var listener = new TcpListener(IPAddress.Loopback, 10001);
-        listener.Start(5);
+        CustomServer.CustomServer.StartWebServer();
 
-        Console.CancelKeyPress += (sender, e) => Environment.Exit(0);
+        Console.WriteLine("Server started. Press any key to stop.");
 
-        while (true)
-        {
-            try
-            {
-                var socket = await listener.AcceptTcpClientAsync();
-                await using var writer = new StreamWriter(socket.GetStream()) { AutoFlush = true };
-                await writer.WriteLineAsync("Welcome to myserver!");
-                await writer.WriteLineAsync("Please enter your commands...");
+        Console.ReadKey();
 
-                using var reader = new StreamReader(socket.GetStream());
-                string? message;
-                do
-                {
-                    message = await reader.ReadLineAsync();
-                    Console.WriteLine("received: " + message);
-                } while (message != "quit");
-            }
-            catch (Exception exc)
-            {
-                Console.WriteLine("error occurred: " + exc.Message);
-            }
-        }
+        CustomServer.CustomServer.Stop();
+        
+        Console.WriteLine("Server stopped. Press any key to exit.");
+        
+        Console.ReadKey();
     }
 }

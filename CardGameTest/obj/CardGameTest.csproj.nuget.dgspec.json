@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGameTest/CardGameTest.csproj": {}
+    "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGameTest/CardGameTest.csproj": {}
   },
   "projects": {
-    "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGame/CardGame.csproj": {
+    "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/CardGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGame/CardGame.csproj",
+        "projectUniqueName": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/CardGame.csproj",
         "projectName": "CardGame",
-        "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGame/CardGame.csproj",
+        "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/CardGame.csproj",
         "packagesPath": "/Users/maximiliankriegl/.nuget/packages/",
-        "outputPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGame/obj/",
+        "outputPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -28,7 +28,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/Server/Server.csproj": {
+                "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/Server/Server.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -59,14 +63,14 @@
         }
       }
     },
-    "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGameTest/CardGameTest.csproj": {
+    "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGameTest/CardGameTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGameTest/CardGameTest.csproj",
+        "projectUniqueName": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGameTest/CardGameTest.csproj",
         "projectName": "CardGameTest",
-        "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGameTest/CardGameTest.csproj",
+        "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGameTest/CardGameTest.csproj",
         "packagesPath": "/Users/maximiliankriegl/.nuget/packages/",
-        "outputPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGameTest/obj/",
+        "outputPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGameTest/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -84,8 +88,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGame/CardGame.csproj": {
-                "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGame/CardGame.csproj"
+              "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/CardGame.csproj": {
+                "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/CardGame.csproj"
               }
             }
           }
@@ -125,6 +129,61 @@
               "version": "[2.4.3, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/Server/Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/Server/Server.csproj",
+        "projectName": "Server",
+        "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/Server/Server.csproj",
+        "packagesPath": "/Users/maximiliankriegl/.nuget/packages/",
+        "outputPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/Server/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/maximiliankriegl/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",

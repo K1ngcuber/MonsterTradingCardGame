@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U4EFt4eVfIIoHOtNl3GLqdsxjcJe9KGfthoF7sYL0ZbY+iZt7ysvE4yqRplnq+xtYGBdkoaNXf/pPLioHlOtHA==",
+  "dgSpecHash": "WFP4+Lu+45nzvxiwDgokR9ctI1Shq44uU7MlNiTXtXIwbD2MRP3xAo7h3QvjMQnkmxnBFG2BfxYqHF8QbjXstw==",
   "success": true,
-  "projectFilePath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGameTest/CardGameTest.csproj",
+  "projectFilePath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGameTest/CardGameTest.csproj",
   "expectedPackageFiles": [
     "/Users/maximiliankriegl/.nuget/packages/coverlet.collector/3.1.0/coverlet.collector.3.1.0.nupkg.sha512",
     "/Users/maximiliankriegl/.nuget/packages/fluentassertions/6.7.0/fluentassertions.6.7.0.nupkg.sha512",

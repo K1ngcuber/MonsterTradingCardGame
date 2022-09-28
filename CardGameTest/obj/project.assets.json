@@ -1853,11 +1853,24 @@
       "CardGame/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Server": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/CardGame.dll": {}
         },
         "runtime": {
           "bin/placeholder/CardGame.dll": {}
+        }
+      },
+      "Server/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Server.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Server.dll": {}
         }
       }
     }
@@ -6248,6 +6261,11 @@
       "type": "project",
       "path": "../CardGame/CardGame.csproj",
       "msbuildProject": "../CardGame/CardGame.csproj"
+    },
+    "Server/1.0.0": {
+      "type": "project",
+      "path": "../Server/Server.csproj",
+      "msbuildProject": "../Server/Server.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6267,11 +6285,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGameTest/CardGameTest.csproj",
+      "projectUniqueName": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGameTest/CardGameTest.csproj",
       "projectName": "CardGameTest",
-      "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGameTest/CardGameTest.csproj",
+      "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGameTest/CardGameTest.csproj",
       "packagesPath": "/Users/maximiliankriegl/.nuget/packages/",
-      "outputPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGameTest/obj/",
+      "outputPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGameTest/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -6289,8 +6307,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGame/CardGame.csproj": {
-              "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGame/CardGame.csproj"
+            "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/CardGame.csproj": {
+              "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/CardGame.csproj"
             }
           }
         }

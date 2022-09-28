@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MdlN5Q0v0c3XEVIJgW9V8JLitzOP2wabWgGSuYBTPU/347IS8/LQoj91+AJcooppmOtC6b2fGe01ocM0X5vNnw==",
+  "dgSpecHash": "GrFIxTmTwM9ouaB5Cnkp0RfwL86rjC/EKpP2supj919uAjS8i9zSwivDtAe7xeFFUoncbIUwsYT6reGiou0AHg==",
   "success": true,
-  "projectFilePath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/CardGame/CardGame/CardGame.csproj",
+  "projectFilePath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/CardGame.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
