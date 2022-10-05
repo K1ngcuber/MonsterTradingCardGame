@@ -2,9 +2,22 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
+      },
       "Server/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Server.dll": {}
         },
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
+    },
     "Server/1.0.0": {
       "type": "project",
       "path": "../Server/Server.csproj",

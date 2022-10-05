@@ -1,5 +1,6 @@
-namespace CustomServer.Attributes;
+namespace CustomServer.Attributes.RouteAttributes;
 
+[AttributeUsage(AttributeTargets.Method)]
 public class HttpAttribute : Attribute
 {
     public string Method { get; }

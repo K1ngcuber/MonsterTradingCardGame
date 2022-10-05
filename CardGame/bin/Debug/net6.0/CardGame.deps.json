@@ -14,7 +14,15 @@
           "CardGame.dll": {}
         }
       },
+      "Models/1.0.0": {
+        "runtime": {
+          "Models.dll": {}
+        }
+      },
       "Server/1.0.0": {
+        "dependencies": {
+          "Models": "1.0.0"
+        },
         "runtime": {
           "Server.dll": {}
         }
@@ -23,6 +31,11 @@
   },
   "libraries": {
     "CardGame/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

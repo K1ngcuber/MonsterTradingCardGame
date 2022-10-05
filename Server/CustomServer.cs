@@ -3,6 +3,8 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using CustomServer.Attributes;
+using CustomServer.Attributes.RouteAttributes;
+using CustomServer.Helpers;
 
 namespace CustomServer;
 
@@ -71,7 +73,7 @@ public static class CustomServer
             using var reader = new StreamReader(body, context.Request.ContentEncoding);
 
             var json = await reader.ReadToEndAsync();
-            
+
             //log request
             Console.WriteLine($"Request: {method} {route} body: {json}");
 
@@ -86,12 +88,20 @@ public static class CustomServer
     private static async Task HandleRequest(string route, string httpMethod, string body, HttpListenerResponse response)
     {
         //find all controllers
-        var controllers = Assembly.GetExecutingAssembly().GetTypes()
+        var controllers = Assembly.GetEntryAssembly()
+            ?.GetTypes()
             .Where(x => x.IsDefined(typeof(ApiControllerAttribute)));
+
+        if (controllers is null)
+        {
+            HandleResponse(500, "Internal Server Error", response);
+            return;
+        }
 
         //find controller with route
         var controller = controllers.FirstOrDefault(x =>
-            x.IsDefined(typeof(RouteAttribute)) && x.GetCustomAttribute<RouteAttribute>()?.Route == route);
+            x.IsDefined(typeof(RouteAttribute)) && route.Contains(x.GetCustomAttribute<RouteAttribute>()?.Route ?? ""));
+
 
         //if not found -> 404
         if (controller is null)
@@ -100,13 +110,17 @@ public static class CustomServer
             return;
         }
 
+        var methodUrl = route.Replace((controller.GetCustomAttribute<RouteAttribute>()?.Route ?? "") + "/", "");
+
         //create instance of controller
         var controllerObj = Activator.CreateInstance(controller);
 
         //find all method
         var method = controller.GetMethods().FirstOrDefault(x =>
-            x.IsDefined(typeof(HttpAttribute)) && x.GetCustomAttribute<HttpAttribute>()?.Method == httpMethod);
-
+            x.IsDefined(typeof(HttpAttribute)) && 
+            x.GetCustomAttribute<HttpAttribute>()?.Method == httpMethod &&
+            methodUrl.Contains(x.GetCustomAttribute<HttpAttribute>()?.Route ?? ""));
+        
         //if not found -> 404
         if (method is null)
         {
@@ -114,11 +128,12 @@ public static class CustomServer
             return;
         }
 
-        //todo body and parameters from route
-        var args = new object?[]
-        {
-            body
-        };
+        var parameterUrl = methodUrl.Replace(method.GetCustomAttribute<HttpAttribute>()?.Route + "/", "");
+
+
+        var parameters = method.GetParameters();
+        var args = MethodUrlHelper.GetArgs(body, parameterUrl, parameters);
+
         try
         {
             object? result;
@@ -126,12 +141,14 @@ public static class CustomServer
             if (isAwaitable)
             {
                 //!!!!!!!!!!! possible source for error xD
-                result = (object)await (dynamic)method.Invoke(controllerObj, args)!;
+
+                result = (object) await (dynamic) method.Invoke(controllerObj, args)!;
             }
             else
             {
                 result = method.Invoke(controllerObj, args);
             }
+
             HandleResponse(200, result?.ToString() ?? "", response);
         }
         //Todo HttpException

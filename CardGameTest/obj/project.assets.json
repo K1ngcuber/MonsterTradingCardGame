@@ -1863,9 +1863,22 @@
           "bin/placeholder/CardGame.dll": {}
         }
       },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
+      },
       "Server/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Server.dll": {}
         },
@@ -6261,6 +6274,11 @@
       "type": "project",
       "path": "../CardGame/CardGame.csproj",
       "msbuildProject": "../CardGame/CardGame.csproj"
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
     },
     "Server/1.0.0": {
       "type": "project",

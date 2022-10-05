@@ -1,5 +1,6 @@
-namespace CustomServer.Attributes;
+namespace CustomServer.Attributes.RouteAttributes;
 
+[AttributeUsage(AttributeTargets.Class)]
 public class RouteAttribute : Attribute
 {
     public string Route { get; }

@@ -1,4 +1,4 @@
-namespace CustomServer.Attributes;
+namespace CustomServer.Attributes.RouteAttributes;
 
 public class HttpGetAttribute : HttpAttribute
 {
