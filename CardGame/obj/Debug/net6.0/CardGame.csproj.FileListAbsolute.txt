@@ -33,3 +33,8 @@
 /Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/bin/Debug/net6.0/Server.pdb
 /Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/bin/Debug/net6.0/Models.dll
 /Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/bin/Debug/net6.0/Models.pdb
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/bin/Debug/net6.0/Npgsql.dll
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/bin/Debug/net6.0/Infrastructure.dll
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/bin/Debug/net6.0/Infrastructure.pdb
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/bin/Debug/net6.0/install.sql

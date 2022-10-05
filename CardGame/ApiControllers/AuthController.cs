@@ -6,14 +6,17 @@ using Models;
 namespace CardGame.ApiControllers;
 
 [ApiController]
-[Route("api/auth")]
+[Route("api/user")]
 public class AuthController : Controller
 {
-    [HttpPost("login")]
-    public async Task<object> Get([FromRoute] int id)
+    
+    [HttpPost]
+    public async Task<int> Register([FromBody] User user)
     {
-        await Task.Delay(1000);
-        return "Geht" + id;
+        Console.WriteLine("User: " + user.Username);
+        await Task.CompletedTask;
+
+        return 200;
     }
     
     

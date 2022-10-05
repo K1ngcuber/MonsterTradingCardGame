@@ -13,6 +13,19 @@ public class DatabaseConnection
         Connection = new NpgsqlConnection(Constants.ConnectionString);
     }
 
+    //create database tables
+    public void Init()
+    {
+        var file = new FileInfo("install.sql");
+        
+        var script = file.OpenText().ReadToEnd();
+        var command = new NpgsqlCommand(script, Connection);
+        Connection.Open();
+        command.ExecuteNonQuery();
+        Connection.Close();
+        Console.WriteLine("Database initialized");
+    }
+
     //create a new command object
     public NpgsqlCommand CreateCommand(string sql)
     {

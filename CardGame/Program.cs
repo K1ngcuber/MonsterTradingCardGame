@@ -1,9 +1,14 @@
-﻿namespace CardGame;
+﻿using Infrastructure;
+
+namespace CardGame;
 
 internal static class Program
 {
     public static void Main()
     {
+        var db = new DatabaseConnection();
+        db.Init();
+        
         CustomServer.CustomServer.StartWebServer();
 
         Console.WriteLine("Server started. Press any key to stop.");

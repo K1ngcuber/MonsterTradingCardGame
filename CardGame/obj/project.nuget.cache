@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Ngne9TJCP0Xt6uvlcB/CH5PN53xpW8HEqzOEIE20dhzOOUMbfdLrjC8gKOvyoDND/ofT5krFJisEuKUGGWoAOA==",
+  "dgSpecHash": "yvfv2udhWFtDig/GzB3vLetVibpx+V+1Q8r7vZD4CCzvKEZSJLHAQBK1RkwZYac5QiEaE2K3t88tfGzvDrMRzA==",
   "success": true,
   "projectFilePath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/CardGame.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/maximiliankriegl/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.2/microsoft.extensions.logging.abstractions.6.0.2.nupkg.sha512",
+    "/Users/maximiliankriegl/.nuget/packages/npgsql/7.0.0-rc.1/npgsql.7.0.0-rc.1.nupkg.sha512",
+    "/Users/maximiliankriegl/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -10,4 +10,10 @@
       <PackageReference Include="Npgsql" Version="7.0.0-rc.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="install.sql">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
