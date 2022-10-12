@@ -65,4 +65,21 @@ public class DatabaseConnection
         await Connection.CloseAsync();
         return result;
     }
+    
+    //insert, update or delete data
+    public async Task ExecuteAsync(NpgsqlCommand command)
+    {
+        await Connection.OpenAsync();
+        await command.ExecuteNonQueryAsync();
+        await Connection.CloseAsync();
+    }
+    
+    //count rows in a table
+    public async Task<int> CountAsync(NpgsqlCommand command)
+    {
+        await Connection.OpenAsync();
+        var result = (int) (await command.ExecuteScalarAsync() ?? 0);
+        await Connection.CloseAsync();
+        return result;
+    }
 }

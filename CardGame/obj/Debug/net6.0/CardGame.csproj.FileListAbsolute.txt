@@ -38,3 +38,5 @@
 /Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/bin/Debug/net6.0/Infrastructure.dll
 /Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/bin/Debug/net6.0/Infrastructure.pdb
 /Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/bin/Debug/net6.0/install.sql
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/bin/Debug/net6.0/BusinessLogic.dll
+/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/CardGame/bin/Debug/net6.0/BusinessLogic.pdb

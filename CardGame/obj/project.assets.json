@@ -51,6 +51,21 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "BusinessLogic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Infrastructure": "1.0.0",
+          "Models": "1.0.0",
+          "Server": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BusinessLogic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessLogic.dll": {}
+        }
+      },
       "Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -192,6 +207,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "BusinessLogic/1.0.0": {
+      "type": "project",
+      "path": "../BusinessLogic/BusinessLogic.csproj",
+      "msbuildProject": "../BusinessLogic/BusinessLogic.csproj"
+    },
     "Infrastructure/1.0.0": {
       "type": "project",
       "path": "../Infrastructure/Infrastructure.csproj",
@@ -210,6 +230,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BusinessLogic >= 1.0.0",
       "Infrastructure >= 1.0.0",
       "Server >= 1.0.0"
     ]
@@ -243,6 +264,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/BusinessLogic/BusinessLogic.csproj": {
+              "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/BusinessLogic/BusinessLogic.csproj"
+            },
             "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/Infrastructure/Infrastructure.csproj": {
               "projectPath": "/Users/maximiliankriegl/Desktop/FH Stuff/WS3/C#/MonsterTradingCardGame/Infrastructure/Infrastructure.csproj"
             },

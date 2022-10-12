@@ -1,11 +1,22 @@
-CREATE TABLE IF NOT EXISTS Card(
-                                   ID INT PRIMARY KEY     NOT NULL,
-                                   NAME           TEXT    NOT NULL,
-                                   DAMAGE            INT     NOT NULL
+CREATE TABLE IF NOT EXISTS "Card"
+(
+    ID     UUID PRIMARY KEY NOT NULL,
+    NAME   TEXT             NOT NULL,
+    DAMAGE INT              NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS "User"(
-                                   ID INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY ,
-                                   Username TEXT NOT NULL,
-                                   Password TEXT NOT NULL
+CREATE TABLE IF NOT EXISTS "User"
+(
+    ID         UUID PRIMARY KEY NOT NULL,
+    USERNAME   TEXT             NOT NULL,
+    "PASSWORD" TEXT             NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "Collection"
+(
+    ID     UUID PRIMARY KEY NOT NULL,
+    USERID UUID             NOT NULL,
+    CARDID UUID             NOT NULL,
+    FOREIGN KEY (USERID) REFERENCES "User" (ID),
+    FOREIGN KEY (CARDID) REFERENCES "Card" (ID)
 );

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "CardGame/1.0.0": {
         "dependencies": {
+          "BusinessLogic": "1.0.0",
           "Infrastructure": "1.0.0",
           "Server": "1.0.0"
         },
@@ -36,6 +37,16 @@
         }
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "BusinessLogic/1.0.0": {
+        "dependencies": {
+          "Infrastructure": "1.0.0",
+          "Models": "1.0.0",
+          "Server": "1.0.0"
+        },
+        "runtime": {
+          "BusinessLogic.dll": {}
+        }
+      },
       "Infrastructure/1.0.0": {
         "dependencies": {
           "Npgsql": "7.0.0-rc.1"
@@ -85,6 +96,11 @@
       "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "BusinessLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Infrastructure/1.0.0": {
       "type": "project",
